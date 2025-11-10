@@ -96,6 +96,8 @@ CREATE TABLE Incident (
     date_incident DATE NOT NULL,
     description VARCHAR(255),
     id_vehicule INT NOT NULL,
+    cause VARCHAR(255),
+    impact_financier FLOAT,
     FOREIGN KEY (id_vehicule) REFERENCES Vehicule(id_vehicule)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
